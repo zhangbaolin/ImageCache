@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Thumbnail extends StatefulWidget {
   @override
   _ThumbnailState createState() => _ThumbnailState();
@@ -34,15 +35,7 @@ class _ThumbnailState extends State<Thumbnail> {
         ),
       ),
     );
-  }
+  } 
 
-  getTh(){
-    final uint8list = await VideoThumbnail.thumbnailFile(
-  video: "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4",
-  thumbnailPath: (await getTemporaryDirectory()).path,
-  imageFormat: ImageFormat.WEBP,
-  maxHeightOrWidth: 0, // the original resolution of the video
-  quality: 75,
-);
-  }
+
 }
